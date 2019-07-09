@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type='text/javascript' id='txtEmail'/>
+    <input type="button" value="validate" onclick="validateEmail()" id='btn';>
+<script>
+
+   
+        function validateEmail() {
+         var emailID = document.getElementById("txtEmail").value;
+       
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+         
+        
+            for(var i=0;i<atpos;i++)
+            {
+                var id=emailID[i];
+            }
+           // alert(id);
+            if(id>='a' && id<='z' || id>='0' && id<='9' )
+            {
+                for(var j=atpos+1;j<dotpos;j++)
+                {
+                    var id1=emailID[j];
+                }
+                if(id1>='a' && id1<='z' || id1>='0' && id1<='9')
+                {
+                    //alert("valid");
+                    for(var k=j+1;k!=' ';k++)
+                    {   
+                        alert("valid");
+                        var pwd=Math.floor(Math.random() * 540);
+                        alert("Password is:abcd"+pwd);
+                    }
+                }
+                var pwd=Math.floor(Math.random() * 540);
+                alert("Password is:abcd"+pwd);
+
+            }
+            else{
+                alert("invalid");
+            }
+ //           return( true );
+         }
+         
+      
+</script>
+</body>
+</html>
+    
