@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type='text/javascript' id='txtNumber'/>
+    <input type="button" value="validate" onclick="validate()" id='btn';>
+<script>
+
+   function validate() {
+    var numb = document.getElementById('txtNumber').value;
+   // var number='2038';
+    var number=Array.from(numb)
+   // num = ('' + number).split('').map(function(digit)  {return +digit;});
+    var newArray=[];
+    newArray.push(number[0]);
+    for(var i=0;i<number.length;i++)
+    {
+    if( (number[i]%2==0 || number[i]==0) &&  (number[i+1]%2==0 || number[i+1]==0))
+    {
+        
+      newArray.push('-');
+      newArray.push(number[i+1]);
+
+    }
+    else{
+        
+        newArray.push(number[i+1]);
+    }
+    }
+
+   var array2=newArray.join("");   
+    alert(array2);
+    
+
+   }
+</script>
+</body>
+</html>
+    
